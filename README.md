@@ -1,6 +1,6 @@
-# To-Do List Project
+# TOODOO
 
-![To-Do List Banner](https://via.placeholder.com/1200x400?text=To-Do+List+Project)
+<img src="https://github.com/jacky1a2a3a4a/TOODOO/blob/main/assets/images/logo_noback.png?raw=true" alt="TOODOO logo" width="200" height="200" />
 
 ## 簡介
 這是一個使用 Vite 作為開發工具的 To-Do List 專案，結合了現代前端技術構建，提供用戶友好的待辦事項管理介面。
