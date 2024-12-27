@@ -1,0 +1,190 @@
+#login-container {
+  position: relative;
+  background: linear-gradient(to bottom, var(--secondary), var(--primary));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // border: var(--test);
+
+  .error-text {
+    color: tomato;
+    font-size: 0.75rem;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.login-img {
+  width: 35%; //為了讓左右空間均等，圖片與表單容器各佔35%，外層最大容器已使用justify-content-center
+  user-select: none;
+  // border: var(--test);
+
+  h3 {
+    color: var(--white);
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+
+  h4 {
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  img {
+    width: 200px;
+    aspect-ratio: auto;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+
+    &:hover {
+      animation: elastic-bounce 0.6s ease-out;
+    }
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
+    width: 40%;
+    margin: 30px 0;
+
+    h3 {
+      font-size: 30px;
+    }
+
+    h4 {
+      font-size: 10px;
+    }
+
+    img {
+      width: 100px;
+    }
+  }
+}
+
+/* 定義彈性跳動動畫 */
+@keyframes elastic-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  70% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.form-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 35%;
+  height: 400px;
+  // border: var(--test);
+
+  @media (max-width: 768px) {
+    align-items: flex-start;
+    width: 60%;
+  }
+}
+
+.login,
+.register {
+  position: absolute;
+  width: 100%;
+  // border: var(--test);
+
+  /* 初始狀態 */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(30px);
+  transition: all 0.3s ease;
+  pointer-events: none; /* 防止隱藏時的互動 */
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    pointer-events: auto; /* 恢復互動 */
+  }
+}
+
+#login-form,
+#register-form {
+  h4 {
+    color: var(--white);
+    margin: 1.25rem 0 0.5rem;
+  }
+
+  #login-email-content,
+  #login-password-content,
+  #register-email-content,
+  #register-nickname-content,
+  #register-password-content,
+  #register-password2-content {
+    color: var(--dark);
+    background-color: var(--white);
+    box-shadow: var(--shadow-1);
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    margin-bottom: 0.5rem;
+
+    &::placeholder {
+      color: var(--gray);
+      font-size: 0.75rem;
+    }
+  }
+
+  // buttons
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+
+    .primary-btn {
+      color: var(--white);
+      background-color: var(--danger);
+      box-shadow: var(--shadow-1);
+      display: block;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 0.5rem;
+      padding: 0.75rem 1.25rem;
+      transition: all 0.2s ease;
+
+      &:hover {
+        opacity: 0.8;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-2);
+      }
+    }
+
+    .secondary-btn {
+      color: var(--danger);
+      opacity: 0.5;
+      font-size: 0.8rem;
+      text-decoration: underline;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+

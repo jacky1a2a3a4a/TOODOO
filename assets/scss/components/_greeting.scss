@@ -1,0 +1,29 @@
+.greeting {
+  display: flex;
+  max-width: 100%;
+  padding: 20px 60px;
+}
+
+.title,
+.title input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.title input {
+  //樣式
+  flex: 1 1 0%;
+  margin-left: 0.5rem;
+  min-width: 0;
+  font-style: italic;
+}
+
+.title input::placeholder {
+  color: var(--gray);
+  font-style: italic;
+  opacity: 0.5;
+}

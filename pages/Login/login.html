@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOODOO-Login</title>
+
+    <!-- 字體  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chewy&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Zen+Kaku+Gothic+New&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- icon  -->
+    <link rel="icon" href="/assets/images/favicon.ico" />
+
+    <!-- axios  -->
+    <script src="/utils/axios.min.js"></script>
+    <!-- axios cdn  -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script> -->
+
+    <!-- css  -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+
+  <body>
+    <section id="login-container">
+      <!-- 圖片  -->
+      <section class="login-img">
+        <h3>TOODOO</h3>
+        <h4>The cutest todo list.</h4>
+        <img src="/assets/images/logo_noback.png" alt="TOODOO Logo" />
+      </section>
+
+      <section class="form-container">
+        <!-- 登入  -->
+        <section class="login active">
+          <form id="login-form">
+            <h4>Email</h4>
+            <input
+              id="login-email-content"
+              name="login-email-content"
+              type="email"
+              placeholder="Please key in your Email."
+              required
+            />
+
+            <h4>Password</h4>
+            <input
+              id="login-password-content"
+              name="login-password-content"
+              type="password"
+              placeholder="please key in your password."
+              required
+            />
+            <p class="error-text hidden" id="login-error">
+              Error, please check your email and password.
+            </p>
+
+            <!-- 登入按鈕  -->
+            <div class="buttons">
+              <input
+                id="login-btn"
+                class="primary-btn"
+                type="submit"
+                value="Login"
+              />
+              <button
+                id="switch-to-register-btn"
+                class="secondary-btn"
+                type="button"
+              >
+                Register
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- 註冊  -->
+        <section class="register">
+          <form action="" id="register-form">
+            <h4>Email</h4>
+            <input
+              id="register-email-content"
+              name="register-email-content"
+              type="email"
+              placeholder="Please key in your Email."
+              required
+            />
+
+            <h4>Nickname</h4>
+            <input
+              id="register-nickname-content"
+              name="register-nickname-content"
+              type="text"
+              placeholder="Please key in your nickname."
+              required
+            />
+
+            <h4>Password</h4>
+            <input
+              id="register-password-content"
+              name="register-password-content"
+              type="password"
+              placeholder="please key in your password."
+              required
+            />
+            <p class="error-text hidden" id="password-length-error">
+              Password length must more than 6.
+            </p>
+
+            <h4>Password Double Check</h4>
+            <input
+              id="register-password2-content"
+              name="register-password2-content"
+              type="password"
+              placeholder="please key in your password again."
+              required
+            />
+            <p class="error-text hidden" id="password-match-error">
+              Password double check is failed.
+            </p>
+            <p class="error-text hidden" id="register-repeat-error">
+              This account has already existed.
+            </p>
+
+            <!-- 註冊按鈕  -->
+            <div class="buttons">
+              <button
+                id="switch-to-login-btn"
+                type="button"
+                class="secondary-btn"
+              >
+                Back to Login
+              </button>
+              <input
+                id="register-btn"
+                type="submit"
+                value="Register"
+                class="primary-btn"
+              />
+            </div>
+          </form>
+        </section>
+      </section>
+    </section>
+
+    <!-- js  -->
+    <script type="module" src="/pages/Login/login.js"></script>
+  </body>
+</html>

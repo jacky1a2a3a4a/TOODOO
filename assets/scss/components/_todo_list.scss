@@ -1,0 +1,278 @@
+//basic
+.todo-list {
+  flex: 1; /* 彈性分配寬度 */
+  max-width: 100%; /* 移除過度限制 */
+  padding: 0 0.5rem;
+  // border: var(--test);
+}
+
+.todo-list-container {
+  background-color: var(--white);
+  max-width: 100%; /* 平均分配寬度 */
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-1);
+}
+
+.todo-list h3 {
+  color: var(--primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+// 分類按鈕
+.sort-buttons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+
+  h4 {
+    color: var(--gray);
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  .sort {
+    color: var(--white);
+    background-color: var(--secondary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0 10px;
+    margin-left: 10px;
+    border-radius: 0 8px 8px 0;
+    transition: all 0.3s ease;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .sort:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .sort:has(input[type='radio']:checked) {
+    transform: translateY(2px); /* 模擬按壓效果 */
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// tabs
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--light);
+  box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.1); /* 只在底部產生陰影 */
+}
+
+.tab {
+  color: var(--gray);
+  flex: 1;
+  text-align: center;
+  padding: 18px 14px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.1s ease;
+}
+
+.tab:hover {
+  opacity: 0.8;
+}
+
+.tab.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+
+//no task image
+.task-clear-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0 10px 0;
+  // border: var(--test);
+
+  .task-clear-img {
+    width: 20%;
+    filter: grayscale(90%) drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+    opacity: 0.8;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+// task list
+.task-list {
+  margin-top: 10px;
+  // border: var(--test);
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 0.8px solid var(--gray);
+}
+
+//因為前面有歸零樣式，因此需要用標籤名來提高權重
+input.task-checkbox {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  appearance: auto;
+}
+
+.task-list-tag {
+  color: var(--white);
+  background-color: var(--white);
+  padding: 5px;
+  margin-right: 5px;
+  border-radius: 6px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  user-select: none;
+
+  &.business {
+    background-color: var(--business);
+  }
+
+  &.personal {
+    background-color: var(--personal);
+  }
+
+  &.travel {
+    background-color: var(--travel);
+  }
+
+  &.study {
+    background-color: var(--study);
+  }
+}
+
+input.task-content {
+  color: var(--gray);
+  display: flex;
+  flex: 1;
+  font-size: 14px;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  cursor: pointer;
+  appearance: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.task.completed input.task-content {
+  opacity: 0.6;
+  color: var(--gray);
+  text-decoration: line-through;
+  // text-decoration-color: var(--primary);
+}
+
+input.task-checkbox {
+  position: relative;
+  appearance: none; /* 隱藏默認樣式 */
+  width: 16px;
+  height: 16px;
+  border: 1.8px solid var(--gray); /* 設定外框顏色 */
+  border-radius: 4px; /* 可選：圓角 */
+  cursor: pointer;
+}
+
+input.task-checkbox:checked {
+  background-color: var(--primary); /* 設定選中時的背景色 */
+  border: none;
+}
+
+input.task-checkbox:checked::after {
+  position: absolute;
+  content: '✔'; /* 添加勾勾符號 */
+  color: var(--white); /* 勾勾顏色 */
+  font-size: 12px; /* 勾勾大小 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 讓勾勾居中 */
+}
+
+.edit-btn {
+  color: var(--danger);
+  margin-right: 0.75rem;
+  opacity: 0.5;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease;
+  user-select: none; //禁止文字選取
+}
+
+.edit-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.edit-btn:active {
+  color: var(--primary);
+  transform: scale(0.9);
+}
+
+.remove-btn {
+  color: var(--danger);
+  margin-right: 0.5rem;
+  opacity: 0.5;
+  font-size: 18px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease;
+}
+
+.remove-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.remove-btn:active {
+  color: var(--primary);
+  transform: scale(0.9);
+}
+
+//刪除用特效
+.slide-up {
+  opacity: 0;
+  transform: translateY(0%);
+  transition: all 0.2s ease;
+}
+
+// footer
+.footer {
+  color: var(--gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  padding: 14px 10px 18px;
+  margin-top: 10px;
+}
+
+.task-count {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.clear-all-btn {
+  color: var(--danger);
+  opacity: 0.5;
+  cursor: pointer;
+  user-select: none;
+}
+
+.clear-all-btn:hover {
+  opacity: 1;
+  text-decoration: underline;
+}

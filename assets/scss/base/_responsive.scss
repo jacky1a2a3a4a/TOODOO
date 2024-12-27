@@ -1,0 +1,58 @@
+// 定義響應式斷點變數
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-880: 880px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+@media (max-width: $breakpoint-880) {
+  //左右大容器
+  .app {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  //greeting
+  .greeting {
+    justify-content: center;
+    padding: 20px 0;
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  //左
+  .create-todo {
+    padding: 0;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  //右
+  .todo-list {
+    padding: 0;
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .navbar-container {
+    flex-direction: column;
+  }
+
+  .account-container {
+    display: none;
+  }
+
+  .app {
+    padding: 0 20px;
+  }
+
+  //左
+  #new-todo-form .options {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5rem;
+  }
+}

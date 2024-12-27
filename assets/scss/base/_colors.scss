@@ -1,0 +1,22 @@
+:root {
+  --primary: rgb(247, 173, 77);
+  --secondary: rgb(255, 208, 120);
+
+  --business: rgb(229, 189, 226);
+  --personal: rgb(189, 200, 229);
+  --travel: rgb(189, 229, 204);
+  --study: rgb(189, 229, 222);
+
+  --light: rgb(238, 238, 238);
+  --gray: rgb(171, 171, 171);
+  --dark: rgb(142, 129, 119);
+  --danger: rgb(200, 136, 52);
+  --white: rgb(255, 255, 255);
+  --test: 1px solid tomato;
+
+  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-2: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  --business-glow: 0 0 4px rgba(112, 153, 214, 0.75);
+  --personal-glow: 0 0 4px rgba(141, 214, 112, 0.75);
+}
