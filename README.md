@@ -1,90 +1,85 @@
-# TOODOO
+# TOODOO - The Cutest Web Todo List
+<p align="center">
+  <img src="https://github.com/jacky1a2a3a4a/TOODOO/blob/main/assets/images/github_cover1.png?raw=true" alt="TOODOO cover1" width="400" />
+  <img src="https://github.com/jacky1a2a3a4a/TOODOO/blob/main/assets/images/github_cover2.png?raw=true" alt="TOODOO cover2" width="400" />
+</p>
 
-<img src="https://github.com/jacky1a2a3a4a/TOODOO/blob/main/assets/images/logo_noback.png?raw=true" alt="TOODOO logo" width="200" height="200" />
+## Introduction | 簡介
 
-## 簡介
-這是一個使用 Vite 作為開發工具的 To-Do List 專案，結合了現代前端技術構建，提供用戶友好的待辦事項管理介面。
+This is the cutest and lightweight web todo list tool that helps you easily record daily tasks and enjoy the satisfaction of crossing them off!  
+這是一個最可愛且輕量的網頁待辦清單小工具，協助您輕鬆記錄每日的待辦事項，並享受將任務通通劃掉的快感！
 
----
+## Features | 功能
 
-## 功能
-- **用戶登入頁面**
-- **新增、刪除、編輯待辦事項**
-- **儲存待辦事項於本地存儲**
+- **Login Feature | 登入功能**  
+  Provides a simple login and registration feature.  
+  提供簡易的登入與註冊功能。
 
----
+- **Todo List Features | 待辦事項功能**
+  1. Add, edit, cross off, and delete multiple tasks.  
+     新增、編輯、劃掉、刪除多項待辦事項。
+  2. Sort tasks by attributes and creation time.  
+     依照屬性與新增時間進行排序。
+  3. Save tasks locally for easy future access and usage.  
+     將待辦事項儲存於本地端，方便日後查看與使用。
 
-## 專案結構
+- **Notes | 注意事項**  
+  The login feature uses a test API, and all data resets daily at 23:59.  
+  登入功能串接之API為測試用，每日 23:59 會重置資料紀錄。
+
+## Project Structure | 專案結構
+
 ```plaintext
-public/                # 編譯後的靜態檔案
-  assets/              # 靜態資源，如圖片、CSS、JS
-pages/                 # 頁面檔案
-  Login/               # 登入頁面
-  ToDoList/            # 待辦事項頁面
-utils/                 # 工具函式，如 axios
-assets/                # 開發用的靜態資源
+assets/                # Static resources like images and CSS. 靜態資源，如:圖片與CSS樣式。
+pages/                 # HTML pages. HTML 頁面。
+public/                # Compiled files. 編譯後的檔案。
+├── assets/              # Static resources like images, JS, CSS. 靜態資源，如:圖片,JS,CSS樣式。
+└── pages/               # HTML pages. HTML 頁面。
+utils/                 # JS utility functions. JS 組件函數。
 ```
 
----
+### How to Start the Project | 如何啟動專案
 
-## 如何啟動專案
+#### 1. Clone the Project | 複製專案
 
-### 1. 環境準備
-確保你的環境已經安裝以下工具：
-- [Node.js](https://nodejs.org/) (建議版本 16 以上)
-- [Git](https://git-scm.com/)
-
-### 2. 克隆專案
 ```bash
 git clone https://github.com/your-repo-name/to_do_list_project.git
 cd to_do_list_project
 ```
 
-### 3. 安裝相依套件
+#### 2. Install Dependencies Using npm | 利用npm安裝套件
+
 ```bash
 npm install
 ```
 
-### 4. 啟動開發伺服器
+#### 3. Start the Development Server | 啟動開發伺服器
+
 ```bash
 npm run dev
 ```
+
+Open your browser and visit [http://localhost:5173](http://localhost:5173).  
 開啟瀏覽器並訪問 [http://localhost:5173](http://localhost:5173)。
 
----
+## Technologies Used | 使用技術
 
-## 建置專案
-若需要將專案進行生產環境建置，執行以下指令：
-```bash
-npm run build
-```
-建置後的檔案會輸出到 `public/` 資料夾。
+- **Core Technologies | 基本技術**: Built using HTML, CSS, and JavaScript for core functionalities.  
+  使用 HTML、CSS、JavaScript 建構核心功能。
+- **Style Management | 樣式管理**: Utilized SCSS for style management, improving maintainability.  
+  採用 SCSS 進行樣式管理，提升樣式維護性。
+- **Build Tool | 打包工具**: Used Vite for fast development and bundling.  
+  使用 Vite 作為快速開發與打包的工具。
+- **Backend Communication | 後端溝通**: Used Axios for API requests and data handling.  
+  利用 Axios 進行 API 請求和資料處理。
+- **Environment Support | 環境支援**: Relied on Node.js for environment management and dependency installation.  
+  依賴 Node.js 進行環境管理與套件安裝。
 
----
+## Contact | 聯絡方式
 
-## 使用技術
-- **前端框架**: HTML, CSS, JavaScript
-- **工具**: Vite
-- **其他**: Axios
+For any inquiries, please contact [jacky1a2a3a4a@example.com](mailto:jacky1a2a3a4a@example.com).  
+若有任何問題，請聯絡 [jacky1a2a3a4a@example.com](mailto:jacky1a2a3a4a@example.com)。
 
----
 
-## 未來改進
-- **待辦事項的雲端同步功能**
-- **介面美化與 RWD 支援**
 
----
-
-## 貢獻
-歡迎貢獻此專案！請依以下步驟提交你的修改：
-1. Fork 此專案
-2. 創建分支進行修改
-3. 提交 Pull Request
-
----
-
-## 聯絡方式
-若有任何問題，請聯絡 [your-email@example.com](mailto:your-email@example.com)。
-
-![Footer Image](https://via.placeholder.com/1200x200?text=Thank+You+for+Using+Our+Project)
 
