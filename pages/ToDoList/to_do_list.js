@@ -350,7 +350,7 @@ function logout() {
       axios.defaults.headers.common['Authorization'] = null;
 
       alert('Logout successful! Now will return to login page.')
-      window.location.href = '/pages/Login/login.html';
+      window.location.href = '../Login/login.html';
       console.log(res);
     })
     .catch((error) => {

@@ -84,7 +84,7 @@ function login(email, password) {
         img.style.animation = 'elastic-bounce 0.6s ease-out';
 
         img.addEventListener('animationend', (e) => {
-          window.location.href = '/pages/ToDoList/to_do_list.html'; //頁面跳轉
+          window.location.href = '../ToDoList/to_do_list.html'; //頁面跳轉
         });
       }, 0);
 
