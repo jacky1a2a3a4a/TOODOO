@@ -59,8 +59,17 @@ npm install
 npm run dev
 ```
 
-Open your browser and visit [http://localhost:5173](http://localhost:5173).  
-開啟瀏覽器並訪問 [http://localhost:5173](http://localhost:5173)。
+### Live Demo | 線上使用
+
+- **Login Page | 登入頁面**  
+  [Login](https://jacky1a2a3a4a.github.io/TOODOO/pages/Login/login.html)  
+  [登入頁面](https://jacky1a2a3a4a.github.io/TOODOO/pages/Login/login.html)
+
+- **To-Do List Page | 待辦清單頁面**  
+  [To-Do List](https://jacky1a2a3a4a.github.io/TOODOO/pages/ToDoList/to_do_list.html)  
+  [待辦清單頁面](https://jacky1a2a3a4a.github.io/TOODOO/pages/ToDoList/to_do_list.html)
+
+
 
 ## Technologies Used | 使用技術
 
