@@ -86,7 +86,7 @@ npm run dev
 
 ## Contact | 聯絡方式
 
-For any inquiries, please contact [jacky1a2a3a4a@hmail.com](mailto:jacky1a2a3a4a@example.com).  
+For any inquiries, please contact [jacky1a2a3a4a@gmail.com](mailto:jacky1a2a3a4a@example.com).  
 若有任何問題，請聯絡 [jacky1a2a3a4a@gmail.com](mailto:jacky1a2a3a4a@example.com)。
 
 
